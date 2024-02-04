@@ -1,62 +1,61 @@
 body {
     background-color: pink;
   }
-  .img-bg {
+.img-bg {
     mix-blend-mode: multiply;
     filter: contrast(1);
     display: block;
-  }
-  .title {
+}
+.title {
     mix-blend-mode: multiply;
     filter: contrast(1);
     display: block;
     width: 500px;
     height: 250px;
-  }
-  .center {
+}
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 75vh;
     flex-direction: column;
-  }
-  p {
+}
+p {
     margin-top: 5px;
-  }
-  button {
-    margin-top: 10px;
+}
+button {
+    /* margin-top: 10px; */
     padding: 10px 20px;
-    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: opacity 0.3s ease;
     position: relative;
-  }
-  button:hover {
+}
+button:hover {
     opacity: 0.8;
-  }
+}
   
-  .button-container {
+.button-container {
     display: flex;
-  }
-  #yes {
+}
+#yes {
     margin-right: 10px;
     background-color: green;
-  }
-  #no {
+}
+#no {
     background-color: red;
     position: relative;
-  }
-  .yes-img {
+}
+.yes-img {
     display: none;
-  }
-  footer {
+}
+footer {
     text-align: center;
     padding-top: 175px;
-  }
-  .whole {
+}
+.whole {
     mix-blend-mode: multiply;
     filter: contrast(1);
     background-repeat: repeat;
@@ -66,5 +65,4 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-  }
-  
+}

@@ -3,29 +3,48 @@ let canClick = true;
 let inCooldown = false;
 const yesButton = document.getElementById("yes");
 const wholeBackground = document.querySelector(".whole");
+let flag = false;
 
 noButton.addEventListener("mouseover", function () {
   noButton.style.left = `${Math.floor(Math.random() * 200)}%`;
   noButton.style.top = `${Math.floor(Math.random() * 200)}%`;
 });
 
+
+var count = 0;
+
 noButton.addEventListener("click", function () {
-  if (canClick && !inCooldown) {
-    changeNoText();
-    canClick = false;
+    if (flag == false) {
+        flag = true;
+        count = 0; 
+    }
 
-    setTimeout(function () {
-      canClick = true;
-    }, 2000);
+    if (canClick && !inCooldown) {
+        changeNoText();
+        canClick = false;
 
-    noButton.style.left = `${Math.floor(Math.random() * 200)}%`;
-    noButton.style.top = `${Math.floor(Math.random() * 200)}%`;
-  }
-  var rand = Math.floor(Math.random() * 7);
-  var str = "img/no/" + rand + ".gif";
+        setTimeout(function () {
+            canClick = true;
+        }, 2000);
 
-  replaceNoImage(str);
+        noButton.style.left = `${Math.floor(Math.random() * 200)}%`;
+        noButton.style.top = `${Math.floor(Math.random() * 200)}%`;
+
+        count = count + 1;
+        if (count === 3) {
+            alert("You're really committing to No huh?");
+            count = 0; 
+        }
+
+        console.log(count);
+    }
+
+    var rand = Math.floor(Math.random() * 7);
+    var str = "img/no/" + rand + ".gif";
+
+    replaceNoImage(str);
 });
+
 
 function replaceNoImage(imagePath) {
   const imgBg = document.querySelector(".img-bg");
@@ -37,7 +56,7 @@ function replaceNoImage(imagePath) {
 }
 
 function changeNoText() {
-  var noButton = document.getElementById("no");
+  var noButton = document.getElementById("forNo");
   noButton.innerText = randomNoPhrases();
 }
 
@@ -45,7 +64,7 @@ let lastRandomIndex;
 
 function randomNoPhrases() {
   const phrases = [
-    "Are you sure?",
+    "Really????",
     "Come on Babe? :(",
     "You can't do this :(",
     "Please Babe?",
@@ -70,13 +89,16 @@ yesButton.addEventListener("click", function () {
   replaceYesImage(str);
 
   wholeBackground.style.backgroundImage = `url(img/main/123.gif)`;
+
 });
 
 function replaceYesImage(imagePath) {
   const imgBg = document.querySelector(".img-bg");
   const newTxt = document.querySelector(".txt");
   const audio = document.querySelector("audio");
+  var no = document.querySelector("#forNo");
 
+  no.innerText = "";  
   imgBg.src = imagePath;
   imgBg.width = 400;
   imgBg.height = 400;
