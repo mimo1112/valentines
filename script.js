@@ -25,15 +25,16 @@ noButton.addEventListener('click', function () {
 
     replaceNoImage(str);
 });
+
 function replaceNoImage(imagePath) {
     const imgBg = document.querySelector('.img-bg');
     const newTxt = document.querySelector('.txt');
 
     imgBg.src = imagePath;
-    imgBg.width = 400; 
-    imgBg.height = 400; 
-
+    imgBg.width = 400;
+    imgBg.height = 400;
 }
+
 function changeNoText() {
     var noButton = document.getElementById('no');
     noButton.innerText = randomNoPhrases();
@@ -70,19 +71,32 @@ yesButton.addEventListener('click', function () {
 function replaceYesImage(imagePath) {
     const imgBg = document.querySelector('.img-bg');
     const newTxt = document.querySelector('.txt');
+    const audio = document.querySelector('audio');
 
     imgBg.src = imagePath;
-    imgBg.width = 400; 
-    imgBg.height = 400; 
+    imgBg.width = 400;
+    imgBg.height = 400;
     yesButton.style.display = 'none';
     noButton.style.display = 'none';
     newTxt.innerText = txtPhrases();
+    audio.play();
 }
-function txtPhrases(){
-    const phrases = ["HEHEHEHEHE", 
-    "I LOVE YOU <3", 
-    "Thanks Babe :)"
+
+function txtPhrases() {
+    const phrases = ["HEHEHEHEHE",
+        "I LOVE YOU\u2764",
+        "Thanks Babe \uD83D\uDE0A",
+        "사랑해요\u2764"
     ];
-    var rand = Math.floor(Math.random()*phrases.length);
+    var rand = Math.floor(Math.random() * phrases.length);
     return phrases[rand];
 }
+document.addEventListener('DOMContentLoaded', function () {
+    var audio = document.querySelector('audio');
+    
+    audio.addEventListener('ended', function () {
+        audio.currentTime = 0;
+        audio.play();
+    });
+    audio.play();
+});
