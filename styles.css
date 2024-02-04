@@ -6,11 +6,18 @@ body{
     filter: contrast(1);
     display: block;
 }
+.title{
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    display: block;
+    width: 500px;
+    height: 250px;
+}
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     flex-direction: column;   
 }
 p{
@@ -46,4 +53,8 @@ button:hover{
 }
 .yes-img{
     display: none;
+}
+footer{
+    text-align: center;
+    padding-top: 175px;
 }
