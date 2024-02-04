@@ -1,0 +1,49 @@
+body{
+    background-color: pink;
+}
+.img-bg{
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+    display: block;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;   
+}
+p{
+    margin-top: 5px;
+}
+button{
+    margin-top: 10px; 
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+button:hover{
+    opacity: 0.8;
+}
+
+.button-container{
+    display: flex;
+
+}
+#yes{
+    margin-right: 10px;
+    background-color: green;
+    
+}
+#no{
+    background-color:red;
+    position: relative;
+}
+.yes-img{
+    display: none;
+}
