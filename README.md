@@ -17,7 +17,11 @@
 
 # Soon to come 
 - Font/Size changes
+- PHP stuff
 
 # Issues
 - Button doesn't move as elagantly 
 - Button's X&Y seem restricted
+
+# Notes
+- Code isnt validated, bad coding styles used to get the job done
