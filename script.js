@@ -120,8 +120,8 @@ function txtPhrases() {
   return phrases[rand];
 }
 document.addEventListener("DOMContentLoaded", function () {
-  var audio = document.querySelector("audio");
-
+  var audio = document.querySelector("aud");
+  
   audio.addEventListener("ended", function () {
     audio.currentTime = 0;
     audio.volume = 0.1;

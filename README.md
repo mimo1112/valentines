@@ -13,11 +13,12 @@
 - Music plays after yes button
 - Background image added after hitting yes
 - New prompt after every no click
-- Popup after repeated no's
+- Popup after repeated no's (3)
 
 # Soon to come 
 - Font/Size changes
 - PHP stuff
+- Sound after 3 repeatitive no
 
 # Issues
 - Button doesn't move as elagantly 
