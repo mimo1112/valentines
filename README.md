@@ -12,11 +12,11 @@
     - Images are different for yes and no
 - Music plays after yes button
 - Background image added after hitting yes
+- New prompt after every no click
+- Popup after repeated no's
 
 # Soon to come 
-- Popup after repeated no's
 - Font/Size changes
-- New prompt after every no click
 
 # Issues
 - Button doesn't move as elagantly 
